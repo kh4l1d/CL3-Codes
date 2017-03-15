@@ -3,9 +3,9 @@ An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading :wink:
 
-1. Say you want to download the Travelling Salesman cpp file through the terminal, just enter in the following command: 
+1. Say you want to download the binarySearch.py file through the terminal, just enter in the following command: 
 
-       `wget https://raw.githubusercontent.com/kh4l1d/CL1-Codes/master/travellingSalesman.cpp`
+       `wget https://raw.githubusercontent.com/kh4l1d/CL3-Codes/master/binarySearch.py`
        
 
 2. It's of the form: 
