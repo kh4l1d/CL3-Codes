@@ -15,3 +15,12 @@ An attempt to simplify codes as much as possible.
 3. Although it is worth mentioning that repos should ideally be "git clone"-d like this: https://www.youtube.com/watch?v=oDUOWC4yib0
 
 --------------------------------------------------------------------------------------------------------------------------------
+### quickSort.py
+
+1. The xml file pattern MUST be maintained the way it's been written (not implying that I don't like indentation).
+
+2. The reason for this is that in C++ file reading, contents are read line by line and to save some headache the xml file is kept that way.
+
+3. If you can find a simple XML parsing code for C++, go click that Pull Request button or contact me.
+
+--------------------------------------------------------------------------------------------------------------------------------
