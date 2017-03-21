@@ -16,27 +16,30 @@ def vigenereEncryptionUsedToMeanSomethingBackInTheDay(key,message) :
 
         cipherTextCharacters.append(currentCipherTextCharacter)
     cipherText = "".join(cipherTextCharacters) # combines the characters in the character array to form a string
-    return base64.urlsafe_b64encode(cipherText)
+    return cipherText
     # urlsafe_b64encode - standard encoding of the string so that it can be sent SAFELY as part of a URL/mail etc
-
 
 def vigenereDecryptionUsedToMeanSomethingBackInTheDay(key,cipherText) :
     decryptedTextCharacters = []
-    cipherText = base64.urlsafe_b64encode(cipherText) # get the 'safe' version of the string
     for i in range(len(cipherText)) :
         keyForCurrentCharacter = key[(i % len(key))]
-        currentDecryptedTextCharacter = chr((256 + ord(enc[i]) - ord(key_c)) % 256) # observe the order of operations
+        currentDecryptedTextCharacter = chr((256 + ord(cipherText[i]) - ord(keyForCurrentCharacter)) % 256) # observe the order of operations
         decryptedTextCharacters.append(currentDecryptedTextCharacter)
     decryptedText = "".join(decryptedTextCharacters)
     return decryptedText    # origial message so no need of urlsafe_b64encode
 
 print("Enter your password (i.e. key) - ")
-key = input()
+key = raw_input()
+print("")
 print("Enter your message to be encrypted - ")
-message = input()
+message = raw_input()
+print("")
 print("This is the cipher text generated - which can totally not be cracked ;) - ")
 cipherText = vigenereEncryptionUsedToMeanSomethingBackInTheDay(key,message)
-print(cipherText)
+gibberish = base64.urlsafe_b64encode(cipherText) # if cipherText is printed directly, you cannot see the actual characters
+print(gibberish)
+print("")
 print("This is the decrypted message using your password which is supposed to match your original message - ")
 decryptedText = vigenereDecryptionUsedToMeanSomethingBackInTheDay(key,cipherText)
 print(decryptedText)
+print("")
