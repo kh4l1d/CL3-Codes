@@ -24,3 +24,10 @@ An attempt to simplify codes as much as possible.
 3. If you can find a simple XML parsing code for C++, go click that Pull Request button or contact me.
 
 --------------------------------------------------------------------------------------------------------------------------------
+### passwordDataEncryption.py
+
+1. The syllabus vaguely mentions "encryption method overloading" - now I've searched online for this and found no results. I'm assuming this is a mis-print. However if you find a reasonable meaning to it (apart from function overloading), then please do notify me.
+
+2. Python offers rich libraries (such as pycrypto) for a variety of encryption functions - but since here at SPPU we love re-inventing the wheel, the functions have been hard-coded.
+
+--------------------------------------------------------------------------------------------------------------------------------
