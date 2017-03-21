@@ -31,3 +31,10 @@ An attempt to simplify codes as much as possible.
 2. Python offers rich libraries (such as pycrypto) for a variety of encryption functions - but since here at SPPU we love re-inventing the wheel, the functions have been hard-coded.
 
 --------------------------------------------------------------------------------------------------------------------------------
+### pseudoRandomNumberGenerator.py
+
+1. Lorem ipsum dolor blah blah placehoder
+
+![alt tag](https://i.stack.imgur.com/ZWHjC.gif)
+
+--------------------------------------------------------------------------------------------------------------------------------
