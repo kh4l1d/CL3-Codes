@@ -1,4 +1,5 @@
 # Author: Khalid - naam toh suna hi hoga (heavily inspired from http://stackoverflow.com/questions/3062746)
+# Steps to run ->
 # :~$ python yoyo.py
 
 seed = 123456789 # any random number will do
