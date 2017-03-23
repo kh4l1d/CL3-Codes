@@ -33,7 +33,7 @@ An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
 ### pseudoRandomNumberGenerator.py
 
-1. Lorem ipsum dolor blah blah placehoder
+1. Ideal PRNGs like https://en.wikipedia.org/wiki/Mersenne_Twister requires one to learn specific numbers & positions for it to be effective - just see the diagram in the wiki and you'll know what I mean. Thus, only simple PRNGs will be coded as and when encountered.
 
 ![alt tag](https://i.stack.imgur.com/ZWHjC.gif)
 
