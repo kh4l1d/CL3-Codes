@@ -1,6 +1,8 @@
 # Author: https://en.wikipedia.org/wiki/SHA-1
-# Steps to run ->
+# Steps to run as a standalone program ->
 # :~$ python yoyo.py
+# To implement the client-server logic, make sure sha.py,client.py & server.py are in the same directory.
+# Run server.py first and then run client.py
 
 def chunks(bits,chunkSize) :
     return [bits[i:i+chunkSize] for i in range(0, len(bits), chunkSize)]    # slice & dice
