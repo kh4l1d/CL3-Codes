@@ -1,4 +1,5 @@
 # Author: Khalid - naam toh suna hi hoga (heavily inspired from http://stackoverflow.com/questions/2490334)
+# Steps to run ->
 # :~$ python yoyo.py
 
 import base64
