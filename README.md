@@ -40,6 +40,6 @@ An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
 ### trigonometryCalculatorActivity.java
 
-![alt tag](https://github.com/kh4l1d/CL3-Codes/blob/master/trigonometryCalculatorPic.png =154x253)
+![alt tag](https://github.com/kh4l1d/CL3-Codes/blob/master/trigonometryCalculatorPic.png)
 
 --------------------------------------------------------------------------------------------------------------------------------
