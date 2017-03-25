@@ -1,5 +1,5 @@
 # CL3-Codes
-An attempt to simplify codes as much as possible. (8 / 12 done so far)
+An attempt to simplify codes as much as possible. (9 / 12 done so far)
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading :wink:
 
@@ -55,4 +55,18 @@ An attempt to simplify codes as much as possible. (8 / 12 done so far)
        `sudo apt-get install python-setuptools`
        `sudo easy_install pip`
 
+--------------------------------------------------------------------------------------------------------------------------------
+### Plagiarism
+
+1. For this code to run, it's necessary to install a Python module called flask - which is a micro web framework for Python. It can be installed by the following command : 
+
+       `sudo pip install Flask`
+       
+
+2. If you don't have pip installed (it doesn't come bundled with some Python versions), install pip by the following commands :
+
+       `sudo apt-get install python-setuptools`
+       `sudo easy_install pip`
+
+3. Simply run plagiarismChecker.py and then open the browser at 127.0.0.1:5000
 --------------------------------------------------------------------------------------------------------------------------------
