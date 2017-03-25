@@ -38,3 +38,8 @@ An attempt to simplify codes as much as possible.
 ![alt tag](https://i.stack.imgur.com/ZWHjC.gif)
 
 --------------------------------------------------------------------------------------------------------------------------------
+### trigonometryCalculatorActivity.java
+
+![alt tag](https://raw.githubusercontent.com/kh4l1d/CL3-Codes/blob/master/trigonometryCalculatorPic.png)
+
+--------------------------------------------------------------------------------------------------------------------------------
