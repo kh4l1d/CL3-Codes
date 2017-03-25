@@ -1,3 +1,6 @@
+# Author: Khalid - naam toh suna hi hoga
+# Steps to run ->
+# :~$ python yoyo.py
 from flask import Flask
 from flask import request
 from flask import render_template
