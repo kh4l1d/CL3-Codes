@@ -1,5 +1,5 @@
 # CL3-Codes
-An attempt to simplify codes as much as possible. (7 / 12 done so far)
+An attempt to simplify codes as much as possible. (8 / 12 done so far)
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading :wink:
 
@@ -41,5 +41,18 @@ An attempt to simplify codes as much as possible. (7 / 12 done so far)
 ### trigonometryCalculatorActivity.java
 
 ![alt tag](https://github.com/kh4l1d/CL3-Codes/blob/master/trigonometryCalculatorPic.png)
+
+--------------------------------------------------------------------------------------------------------------------------------
+### Booths
+
+1. For this code to run, it's necessary to install a Python module called bitstring - which greatly simplifies tasks such as 2's complement. It can be installed by the following command : 
+
+       `sudo pip install bitstring`
+       
+
+2. If you don't have pip installed (it doesn't come bundled with some Python versions), install pip by the following commands :
+
+       `sudo apt-get install python-setuptools`
+       `sudo easy_install pip`
 
 --------------------------------------------------------------------------------------------------------------------------------
