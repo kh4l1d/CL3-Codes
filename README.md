@@ -1,5 +1,5 @@
 # CL3-Codes
-An attempt to simplify codes as much as possible.
+An attempt to simplify codes as much as possible. (7 / 12 done so far)
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading :wink:
 
