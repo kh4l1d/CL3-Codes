@@ -70,3 +70,19 @@ An attempt to simplify codes as much as possible. (9 / 12 done so far)
 
 3. Simply run plagiarismChecker.py and then open the browser at 127.0.0.1:5000
 --------------------------------------------------------------------------------------------------------------------------------
+### diningPhilosopher.py
+
+1. For this code to run, it's necessary to install a Python module called pymongo - which basically connects our MongoDB to our python code. It can be installed by the following command : 
+
+       `sudo pip install pymongo`
+       
+
+2. If you don't have pip installed (it doesn't come bundled with some Python versions), install pip by the following commands :
+
+       `sudo apt-get install python-setuptools`
+       `sudo easy_install pip`
+
+3. MongoDB needs to be installed for this code to work. If the mongo shell doesn't open when you enter 'mongo' in the terminal, it's probably because the MongoDB daemon is not started. To resolve this, enter :
+       
+       `sudo service mongod start`
+--------------------------------------------------------------------------------------------------------------------------------
