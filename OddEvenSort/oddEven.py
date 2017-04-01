@@ -15,7 +15,7 @@ def my_form_post():
     a = map(int, text.split(','))
     n = len(a)
 
-    concurrentOddEven.oddEvenSort(a,n)
+    concurrentOddEven.oddevensort(a)
 
     return render_template("index.html" , a=a)
 
