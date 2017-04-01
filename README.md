@@ -88,6 +88,6 @@ An attempt to simplify codes as much as possible. (just 1 code to go i.e. DSA)
 --------------------------------------------------------------------------------------------------------------------------------
 ### Plagiarism & OddEvenSort
 
-Both of these codes require a web application and as such Flask (a Python module has been used). To see the output on the browser at 127.0.0.1:5000 you HAVE to create a folder named "templates" and store the html files in it. Flask searches for html files to be rendered in a "templates" folder and if there isn't one, nothing would be displayed.
+1. Both of these codes require a web application and as such Flask (a Python module has been used). To see the output on the browser at 127.0.0.1:5000 you HAVE to create a folder named "templates" and store the html files in it. Flask searches for html files to be rendered in a "templates" folder and if there isn't one, nothing would be displayed.
 `
 --------------------------------------------------------------------------------------------------------------------------------
