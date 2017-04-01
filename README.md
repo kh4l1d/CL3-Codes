@@ -1,5 +1,5 @@
 # CL3-Codes
-An attempt to simplify codes as much as possible. (just 1 code to go i.e. DSA)
+An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading :wink:
 
