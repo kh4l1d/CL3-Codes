@@ -1,5 +1,5 @@
 # CL3-Codes
-An attempt to simplify codes as much as possible. (10 / 12 done so far)
+An attempt to simplify codes as much as possible. (just 1 code to go i.e. DSA)
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading :wink:
 
@@ -85,4 +85,9 @@ An attempt to simplify codes as much as possible. (10 / 12 done so far)
 3. MongoDB needs to be installed for this code to work. If the mongo shell doesn't open when you enter 'mongo' in the terminal, it's probably because the MongoDB daemon is not started. To resolve this, enter :
        
        `sudo service mongod start`
+--------------------------------------------------------------------------------------------------------------------------------
+### Plagiarism & OddEvenSort
+
+Both of these codes require a web application and as such Flask (a Python module has been used). To see the output on the browser at 127.0.0.1:5000 you HAVE to create a folder named "templates" and store the html files in it. Flask searches for html files to be rendered in a "templates" folder and if there isn't one, nothing would be displayed.
+`
 --------------------------------------------------------------------------------------------------------------------------------
