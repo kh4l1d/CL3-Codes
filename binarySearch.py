@@ -32,7 +32,7 @@ print("Enter number to be searched : ")
 key = int(input())
 left = 0
 right = n - 1
-mid = (left + right) / 2
+mid = (left + right) // 2 # Floor Division
 
 while left <= right :
     if a[mid] == key :
