@@ -32,18 +32,20 @@ print("Enter number to be searched : ")
 key = int(input())
 left = 0
 right = n - 1
-mid = (left + right) / 2
+mid = (left + right) // 2 # Floor Division
 
-while left <= right :
-    if a[mid] == key :
-        print("Key was found at position = " + str(mid+1))
-        break
-    elif a[mid] < key :
-        left = mid + 1
-    else :
-        right = mid - 1
-
-    mid = (left + right) / 2
-
-if(left > right) :
+if key not in a:
     print("Key is absent !")
+else:
+    while left <= right :
+        if a[mid] == key :
+            print("Key was found at position = " + str(mid+1))
+            break
+        elif a[mid] < key :
+            left = mid + 1
+        else :
+            right = mid - 1
+
+        mid = (left + right) // 2 # Floor Division 
+
+    
