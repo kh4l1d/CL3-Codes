@@ -38,7 +38,7 @@ def place(n):
 			return False
 	return True
 
-inputFile = open("8q.json")
+inputFile = open("8queens.json")
 data = json.loads(inputFile.read())
 
 data=data["matrix"]
