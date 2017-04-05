@@ -1,42 +1,70 @@
-# Author: Unknown
-# Steps to run (make sure the 8queens.json file is in the same directory as the code) ->
-# :~$ python yoyo.py
-
+#Author: Murtaza - Bass naam hi kafi hai
+#steps python 8q.py
+#keep 8q.py and 8q.joson in same folder 
 import json
-inf=open("8queens.json")
-board=json.loads(inf.read())
-board=board["matrix"]
-for i in board:
-	print(i)
+N=8
+queens = [-1,-1,-1,-1,-1,-1,-1,-1]
+def isValid(col,row):
+	for i in range(col):
+		if(queens[i] == row):
+			return False
+	for i in range(col):
+		if(abs(col-i) == abs(row-queens[i])):
+			return False
+	return True
+			
+def place(n):
+	placed = False;
+	for i in range(N):
+		if(isValid(n,i)):
+			queens[n] = i
+			placed=True
+			break
 
-def issafe(row,col):
-	for i in range(8):
-		for j in range(8):
-			if(board[i][j]==1): #if a queen exists here, then check if it attacks our queen
-				if(row==i):
-					return False
-				if(col==j):
-					return False
-				if(abs(row-i)==abs(col-j)):
-					return False
+	if(not placed): 
+		return False
+		
+	if( n == (N-1)):
+		return True
+		
+	while(not place(n+1)):
+		placed =  False
+		for i in range(queens[n]+1,N):
+			if(isValid(n,i)):
+				queens[n] = i
+				placed=True;
+				break		
+		if(not 	placed):
+			return False
 	return True
 
-def place(col):
-	if(col>=8):		#if all 8 queens are placed, then finish
-		print("\t\tCompleted...")
-		return True
-	for i in range(8):	#checking for all rows in that column
-		if(issafe(i,col)):	#is it safe?
-			board[i][col]=1 #queen is placed here
-			if(place(col+1)==True):	#recursive call to place next queen
-				return True
-			board[i][col]=0		#if not placed, then backtrack, i.e it sets to zero and the loop iterates to check for next position
-	return False
+inputFile = open("8q.json")
+data = json.loads(inputFile.read())
 
-# observe the json file and place(1) - the first queen MUST be placed in the first column
-if(place(1)==True):
-	print("solution found")
-else:
-	print("Solution not possible")
-for i in board:
+data=data["matrix"]
+for i in data:
 	print(i)
+print "\n"
+for i in range(0,N):
+	if(data[i][0] == 1):
+		queens[0] = i
+place(1)
+
+print queens
+print "\n"
+outfile = open("out.json","w")
+data = {}
+matrix = [[],[],[],[],[],[],[],[]]
+
+for i in range(0,N) :
+	for j in range(0,N):
+		if(queens[j] == i):
+			matrix[i].insert(j,1)
+		else:
+			matrix[i].insert(j,0)
+			
+data["matrix"] = matrix
+json.dump(data,outfile)
+for i in matrix:
+	print(i)
+	
