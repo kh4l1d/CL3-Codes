@@ -17,11 +17,9 @@ An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
 ### quickSort.py
 
-1. The xml file pattern MUST be maintained the way it's been written (not implying that I don't like indentation).
+1. Keep the files createXMLfile.py and quickSort.py in the same directory.
 
-2. The reason for this is that in C++ file reading, contents are read line by line and to save some headache the xml file is kept that way.
-
-3. If you can find a simple XML parsing code for C++, go click that Pull Request button or contact me.
+2. Simply run createXMLfile.py and you're done.
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### passwordDataEncryption.py
