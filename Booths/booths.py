@@ -18,7 +18,6 @@ def booth(m, r, x, y):
 	# Initialize
 	totalLength = x + y + 1
 	mA = BitArray(int = m, length = totalLength)
-	rA = BitArray(int = r, length = totalLength)
 	A = mA << (y+1)
 	S = BitArray(int = -m, length = totalLength)  << (y+1)
 	P = BitArray(int = r, length = y)
