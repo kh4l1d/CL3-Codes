@@ -38,7 +38,6 @@ def pseudoPrimeMillerRabin(n) :
 
     return isProbablyPrime
 
-a = []
 print("")
 print("Enter the parameter tuple (p,q,g) : ")
 print("Enter value for p : ")
