@@ -17,8 +17,8 @@ def my_form_post():
 
     text1 = request.form['text1']
     text2 = request.form['text2']
-    plagiarismPercent = stringComparison.extremelySimplePlagiarismChecker(text1,text2)
-    if plagiarismPercent > 50 :
+    plagiarismDetected = stringComparison.apparentlyMaturePlagiarismChecker(text1,text2)
+    if plagiarismDetected is True :
         return "<h1>Plagiarism Detected !</h1>"
     else :
         return "<h1>No Plagiarism Detected !</h1>"
