@@ -29,6 +29,16 @@ def vigenereDecryptionUsedToMeanSomethingBackInTheDay(key,cipherText) :
     decryptedText = "".join(decryptedTextCharacters)
     return decryptedText    # origial message so no need of urlsafe_b64encode
 
+# Python does not support method overloading ! Thus, this trick function below gives the illusion of method overloading.
+def illusionOfMethodOverloading(text1,text2,flag) :
+    if flag is True :   # flag == True, then do encryption
+        output = vigenereEncryptionUsedToMeanSomethingBackInTheDay(text1,text2)
+        return output
+    else :
+        output = vigenereDecryptionUsedToMeanSomethingBackInTheDay(text1,text2)
+        return output
+
+
 print("Enter your password (i.e. key) - ")
 key = raw_input()
 print("")
@@ -36,11 +46,11 @@ print("Enter your message to be encrypted - ")
 message = raw_input()
 print("")
 print("This is the cipher text generated - which can totally not be cracked ;) - ")
-cipherText = vigenereEncryptionUsedToMeanSomethingBackInTheDay(key,message)
+cipherText = illusionOfMethodOverloading(key,message,True)
 gibberish = base64.urlsafe_b64encode(cipherText) # if cipherText is printed directly, you cannot see the actual characters
 print(gibberish)
 print("")
 print("This is the decrypted message using your password which is supposed to match your original message - ")
-decryptedText = vigenereDecryptionUsedToMeanSomethingBackInTheDay(key,cipherText)
+decryptedText = illusionOfMethodOverloading(key,cipherText,False)
 print(decryptedText)
 print("")
