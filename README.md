@@ -1,5 +1,5 @@
 # CL3-Codes
-An attempt to simplify codes as much as possible.
+Instructions and solutions to common issues (please read) ->
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading :wink:
 
@@ -13,6 +13,14 @@ An attempt to simplify codes as much as possible.
        `wget URL/file.txt`
 
 3. Although it is worth mentioning that repos should ideally be "git clone"-d like this: https://www.youtube.com/watch?v=oDUOWC4yib0
+
+### Other similar works (neatly organzied and loaded with cringy (or is it cringey ?) jokes) ->
+
+1. BE Sem1 CL1-Codes -> https://github.com/kh4l1d/CL1-Codes
+
+2. TE Sem1 & Sem2 (Download link) -> https://www.dropbox.com/s/jlsz28bgrpkx7us/Khalid%27s%20Third%20Year.zip?dl=0
+
+3. SE Sem1 & Sem2 (Download link) -> https://www.dropbox.com/s/158agkqibt2cgoh/Khalid%27s%20Second%20Year.zip?dl=0
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### quickSort.py
