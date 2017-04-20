@@ -14,7 +14,7 @@ Instructions and solutions to common issues (please read) ->
 
 3. Although it is worth mentioning that repos should ideally be "git clone"-d like this: https://www.youtube.com/watch?v=oDUOWC4yib0
 
-### Other similar works (neatly organzied and loaded with cringy (or is it cringey ?) jokes) ->
+### Other similar works ->
 
 1. BE Sem1 CL1-Codes -> https://github.com/kh4l1d/CL1-Codes
 
