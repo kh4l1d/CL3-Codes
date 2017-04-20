@@ -13,7 +13,6 @@ def my_form_post():
 
     text = request.form["elements"]
     a = map(int, text.split(','))
-    n = len(a)
 
     concurrentOddEven.oddevensort(a)
 
