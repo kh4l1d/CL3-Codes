@@ -36,11 +36,14 @@ doc4 = {
 "name" : "Nietzsche",
 "thought" : "Stop at nothing to get your donut."
 }
+
 doc_id = collection.insert_one(doc0) # the variable doc_id is not needed
 doc_id = collection.insert_one(doc1)
 doc_id = collection.insert_one(doc2)
 doc_id = collection.insert_one(doc3)
 doc_id = collection.insert_one(doc4)
+
+
 #doc1_id = collection.insert_one(doc1)
 
 #doc2 = collection.find_one({"number" : 1})
@@ -50,71 +53,69 @@ doc_id = collection.insert_one(doc4)
 
 
 class Semaphore(object):
-
-    def __init__(self, initial):
+    def __init__(self, initialAmountOfChopSticks):
         self.lock = threading.Condition(threading.Lock())
-        self.value = initial
+        self.chopSticksAvailable = initialAmountOfChopSticks
 
     def up(self):
         with self.lock:
-            self.value += 1
+            self.chopSticksAvailable += 1
             self.lock.notify()
 
     def down(self):
         with self.lock:
-            while self.value == 0:
+            while self.chopSticksAvailable == 0:
                 self.lock.wait()
-            self.value -= 1
+            self.chopSticksAvailable -= 1
 
 class ChopStick(object):
-
-    def __init__(self, number):
-        self.number = number           # chop stick ID
-        self.user = -1                 # keep track of philosopher using it
+    def __init__(self, chopStickId):
+        self.chopStickId = chopStickId           # chop stick ID
+        self.philosopherId = -1                 # keep track of philosopher using it
         self.lock = threading.Condition(threading.Lock())
-        self.taken = False
+        self.chopStickTaken = False
 
-    def take(self, user):         # used for synchronization
+    def take(self, philosopherId):         # used for synchronization
         with self.lock:
-            while self.taken == True:
+            while self.chopStickTaken == True:
                 self.lock.wait()
-            self.user = user
-            self.taken = True
-            sys.stdout.write("p[%s] took c[%s]\n" % (user, self.number))
+            self.philosopherId = philosopherId
+            self.chopStickTaken = True
+            sys.stdout.write("p[%s] took c[%s]\n" % (philosopherId, self.chopStickId))
             self.lock.notifyAll()
 
-    def drop(self, user):         # used for synchronization
+    def drop(self, philosopherId):         # used for synchronization
         with self.lock:
-            while self.taken == False:
+            while self.chopStickTaken == False:
                 self.lock.wait()
-            self.user = -1
-            self.taken = False
-            doc = collection.find_one({"number" : user})
-            sys.stdout.write("p[%s] i.e. %s dropped c[%s] and thinks -> %s\n" % (user,doc["name"], self.number, doc["thought"]))
+            self.philosopherId = -1
+            self.chopStickTaken = False
+            doc = collection.find_one({"number" : philosopherId})
+            sys.stdout.write("p[%s] i.e. %s dropped c[%s] and thinks -> %s\n" % (philosopherId,doc["name"], self.philosopherId, doc["thought"]))
             self.lock.notifyAll()
 
 
 class Philosopher (threading.Thread):
 
-    def __init__(self, number, left, right, butler):
+    def __init__(self, philosopherId, leftChopStick, rightChopStick, butler):
         threading.Thread.__init__(self)
-        self.number = number            # philosopher number
-        self.left = left
-        self.right = right
+        self.philosopherId = philosopherId            # philosopher number
+        self.leftChopStick = leftChopStick
+        self.rightChopStick = rightChopStick
         self.butler = butler
 
     def run(self):
         for i in range(20):
             self.butler.down()              # start service by butler
             time.sleep(0.1)                 # think
-            self.left.take(self.number)     # pickup left chopstick
+            self.leftChopStick.take(self.philosopherId)     # pickup left chopstick
             time.sleep(0.1)                 # (yield makes deadlock more likely)
-            self.right.take(self.number)    # pickup right chopstick
+            self.rightChopStick.take(self.philosopherId)    # pickup right chopstick
             time.sleep(0.1)                 # eat
-            self.right.drop(self.number)    # drop right chopstick
-            self.left.drop(self.number)     # drop left chopstick
+            self.rightChopStick.drop(self.philosopherId)    # drop right chopstick
+            self.leftChopStick.drop(self.philosopherId)     # drop left chopstick
             self.butler.up()                # end service by butler
-        sys.stdout.write("p[%s] finished thinking and eating\n" % self.number)
+        sys.stdout.write("p[%s] finished thinking and eating\n" % self.philosopherId)
 
 
 def main():
