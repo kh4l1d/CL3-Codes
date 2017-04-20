@@ -37,9 +37,13 @@ Instructions and solutions to common issues (please read) ->
 2. Python offers rich libraries (such as pycrypto) for a variety of encryption functions - but since here at SPPU we love re-inventing the wheel, the functions have been hard-coded.
 
 --------------------------------------------------------------------------------------------------------------------------------
-### pseudoRandomNumberGenerator.py
+### pseudoRandomNumberGenerator.py (and SHA-1)
 
 1. Ideal PRNGs like https://en.wikipedia.org/wiki/Mersenne_Twister requires one to learn specific numbers & positions for it to be effective - just see the diagram in the wiki and you'll know what I mean. Thus, only simple PRNGs will be coded as and when encountered.
+
+2. For the practical exam, if you get this code, you will have to probably club it with the SHA-1 code. Head to the SHA-1+PRNG directory. It's essentially the same code as SHA-1, the only difference being that the value of k (in SHA-1) is randomly generated for each session.
+
+3. Steps for the SHA-1+PRNG code are simple. First create a blank file called "randomKeyForSession.txt" and then run "generateRandomKeyForSession.py". This will generate a random number and store it in the text file. Then normally run your server and client codes.
 
 ![alt tag](https://i.stack.imgur.com/ZWHjC.gif)
 
