@@ -1,5 +1,5 @@
 from xml.etree import ElementTree
-import random, sys
+import sys
 from threading import Thread, current_thread
 
 class quick:
