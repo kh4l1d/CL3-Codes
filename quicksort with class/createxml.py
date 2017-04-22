@@ -1,4 +1,4 @@
-import os, random, sys
+import os, random
 filename = raw_input("Enter the filename: ")+".xml"
 file = open(filename,'w')
 file.write("<Numbers>\n")
