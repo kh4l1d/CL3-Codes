@@ -38,7 +38,7 @@ def apparentlyMaturePlagiarismChecker(text1 , text2) :
     else :
         smallerLength = len(bagOfSupposedlycleanWords2)
 
-    if kitneWordsCopyKiye >= int((0.5 * smallerLength)) :
+    if kitneWordsCopyKiye >= (0.5 * smallerLength) :
         similarityFlag = True
 
     return similarityFlag
