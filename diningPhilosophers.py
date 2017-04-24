@@ -91,7 +91,7 @@ class ChopStick(object):
             self.philosopherId = -1
             self.chopStickTaken = False
             doc = collection.find_one({"number" : philosopherId})
-            sys.stdout.write("p[%s] i.e. %s dropped c[%s] and thinks -> %s\n" % (philosopherId,doc["name"], self.philosopherId, doc["thought"]))
+            sys.stdout.write("p[%s] i.e. %s dropped c[%s] and thinks -> %s\n" % (philosopherId,doc["name"], self.chopStickId, doc["thought"]))
             self.lock.notifyAll()
 
 
