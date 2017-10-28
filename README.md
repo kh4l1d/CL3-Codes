@@ -5,14 +5,22 @@ Instructions and solutions to common issues (please read) ->
 
 1. Say you want to download the binarySearch.py file through the terminal, just enter in the following command: 
 
-       `wget https://raw.githubusercontent.com/kh4l1d/CL3-Codes/master/binarySearch.py`
+```
+wget https://raw.githubusercontent.com/kh4l1d/CL3-Codes/master/binarySearch.py
+```
        
 
 2. It's of the form: 
 
-       `wget URL/file.txt`
+```
+wget URL/file.txt
+```
 
 3. Although it is worth mentioning that repos should ideally be "git clone"-d like this: https://www.youtube.com/watch?v=oDUOWC4yib0
+
+```
+git clone https://github.com/kh4l1d/CL3-Codes.git
+```
 
 ### Other similar works ->
 
@@ -57,26 +65,34 @@ Instructions and solutions to common issues (please read) ->
 
 1. For this code to run, it's necessary to install a Python module called bitstring - which greatly simplifies tasks such as 2's complement. It can be installed by the following command : 
 
-       `sudo pip install bitstring`
+```
+sudo pip install bitstring
+```
        
 
 2. If you don't have pip installed (it doesn't come bundled with some Python versions), install pip by the following commands :
 
-       `sudo apt-get install python-setuptools`
-       `sudo easy_install pip`
+```
+sudo apt-get install python-setuptools
+sudo easy_install pip
+```
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### Plagiarism
 
 1. For this code to run, it's necessary to install a Python module called flask - which is a micro web framework for Python. It can be installed by the following command : 
 
-       `sudo pip install Flask`
+```
+sudo pip install Flask
+```
        
 
 2. If you don't have pip installed (it doesn't come bundled with some Python versions), install pip by the following commands :
 
-       `sudo apt-get install python-setuptools`
-       `sudo easy_install pip`
+```
+sudo apt-get install python-setuptools
+sudo easy_install pip
+```
 
 3. Simply run plagiarismChecker.py and then open the browser at 127.0.0.1:5000
 --------------------------------------------------------------------------------------------------------------------------------
@@ -84,17 +100,24 @@ Instructions and solutions to common issues (please read) ->
 
 1. For this code to run, it's necessary to install a Python module called pymongo - which basically connects our MongoDB to our python code. It can be installed by the following command : 
 
-       `sudo pip install pymongo`
+```
+sudo pip install pymongo
+```
        
 
 2. If you don't have pip installed (it doesn't come bundled with some Python versions), install pip by the following commands :
 
-       `sudo apt-get install python-setuptools`
-       `sudo easy_install pip`
+```
+sudo apt-get install python-setuptools
+sudo easy_install pip
+```
 
 3. MongoDB needs to be installed for this code to work. If the mongo shell doesn't open when you enter 'mongo' in the terminal, it's probably because the MongoDB daemon is not started. To resolve this, enter :
        
-       `sudo service mongod start`
+```
+sudo service mongod start
+```
+
 --------------------------------------------------------------------------------------------------------------------------------
 ### Plagiarism & OddEvenSort
 
